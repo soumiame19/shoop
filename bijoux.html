@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIJOUX</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(to right,#5a642c,#0f27247b);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .slidedr{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotate 30s linear infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100%{
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+        .slidedr a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+        }
+        .slidedr a img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            object-fit: cover;
+            transition: 2s;
+            background-position: center;
+        }
+         
+
+    </style>
+</head>
+<body>
+   <div class="slidedr">
+    <a href="montre.html" style="--i:1;"><img src="./bj1.jfif" alt=""></a>
+    <a href="BAGUE.html" style="--i:2;"><img src="./bj2.webp" alt=""></a>
+    <a href="collier.html" style="--i:3;"><img src="./bj3.jpg" alt=""></a>
+    <a href="boucle.html" style="--i:4;"><img src="./bj4.jfif" alt=""></a>
+    <a href="boucle.html" style="--i:5;"><img src="./bj5.jfif" alt=""></a>
+    <a href="collier.html" style="--i:6;"><img src="./bj6.jfif" alt=""></a>
+    <a href="BAGUE.html" style="--i:7;"><img src="./bj7.jfif" alt=""></a>
+    <a href="montre.html" style="--i:8;"><img src="./bj8.jfif" alt=""></a>
+   </div>
+</body>
+</html>
